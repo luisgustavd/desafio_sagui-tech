@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saguitech Emissão de NFS-e</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Emissão de Nota Fiscal de Serviço (NFS-e)</h1>
+        <form id="notafiscalForm">
+            <label for="valorVenda">Valor da Venda:</label>
+            <input type="number" id="valorVenda" step="0.01" required>
+
+            <label for="itens">Itens Vendidos:</label>
+            <textarea id="itens" rows="3" required></textarea>
+
+            <label for="irpf">Porcentagem do Imposto (IRPF):</label>
+            <input type="number" id="irpf" step="0.01" required>
+
+            <label for="pis">Porcentagem do Imposto (PIS):</label>
+            <input type="number" id="pis" step="0.01" required>
+
+            <label for="cofins">Porcentagem do Imposto (COFINS):</label>
+            <input type="number" id="cofins" step="0.01" required>
+
+            <label for="inss">Porcentagem do Imposto (INSS):</label>
+            <input type="number" id="inss" step="0.01" required>
+
+            <label for="issqn">Porcentagem do Imposto (ISSQN):</label>
+            <input type="number" id="issqn" step="0.01" required>
+
+            <button type="button" onclick="gerarNFSe()">Gerar NFS-e</button>
+        </form>
+
+        <div class="nfse" id="nfseOutput" style="display:none;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
